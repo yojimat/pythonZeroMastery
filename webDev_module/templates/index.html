@@ -113,6 +113,17 @@
     						{% endif %}
 						</form>
 
+						{% if not error %}
+							<form action="/mensagempost" method="Post">
+								<label for="nome">Nome:</label>
+								<input type="text" name="nome" id="nome">
+								<label for="mensagem">Mensagem:</label>
+								<textarea name="mensagem" id="mensagem" rows="3" cols="20"></textarea><br>
+								<button type="submit">Enviar mensagem!</button>
+							</form>
+							<span>{{resposta}}</span>
+						{% endif %}
+
 				</div>
 			</div>
 
